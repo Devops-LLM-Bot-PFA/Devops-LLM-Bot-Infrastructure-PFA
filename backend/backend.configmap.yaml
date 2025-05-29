@@ -8,16 +8,16 @@ metadata:
     app: backend
 
 data:
-  DB_HOST: database-service
+  DB_HOST: "database-service"
   DB_PORT: "5432"
-  DB_NAME: service_pfa
-  DB_USERNAME: root
-  DB_PASSWORD: my-password
-  CLUSTER_HOST: cloud
-  DOCKER_IMAGE: aymenkoched02/devops-llm-bot:latest
-  INSTANCE_NAMESPACE: default
+  DB_NAME: "service_pfa"
+  DB_USERNAME: "root"
+  DB_PASSWORD: "my-password"
+  CLUSTER_HOST: "cloud"
+  DOCKER_IMAGE: "aymenkoched02/devops-llm-bot:latest"
+  INSTANCE_NAMESPACE: "default"
   INSTANCE_PORT: "3000"
   INSTANCE_REPLICAS: "1"
-  SERVICE_TYPE: ClusterIP
-  OPENAI_API_KEY: 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
-  OPENAI_BASE_PATH: https://openrouter.ai/api/v1
+  SERVICE_TYPE: "ClusterIP"
+  OPENAI_API_KEY: "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"
+  OPENAI_BASE_PATH: "https://openrouter.ai/api/v1"

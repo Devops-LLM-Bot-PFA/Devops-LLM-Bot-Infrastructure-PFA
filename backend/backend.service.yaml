@@ -14,4 +14,4 @@ spec:
       targetPort: 7001
       nodePort: 30001
   selector:
-    app: backend
+    app: backend-pod
