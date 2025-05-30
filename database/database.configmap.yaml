@@ -8,5 +8,5 @@ metadata:
     app: database
 
 data:
-  POSTGRES_USER: root
-  POSTGRES_PASSWORD: my-password
+  POSTGRES_USER: "root"
+  POSTGRES_PASSWORD: "my-password"

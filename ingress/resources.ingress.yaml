@@ -1,0 +1,35 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-service
+  namespace: default
+  labels:
+    app.kubernetes.io/managed-by: admin
+    app: ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: pgadmin.devops-wizard.com
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: pgadmin-service
+                port:
+                  number: 80
+
+    - host: backend.devops-wizard.com
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: backend-service
+                port:
+                  number: 7001
