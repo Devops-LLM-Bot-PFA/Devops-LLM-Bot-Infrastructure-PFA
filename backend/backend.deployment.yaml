@@ -24,7 +24,7 @@ spec:
       containers:
         - name: backend-container
           image: aymenkoched02/devops-llm-bot-backend:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 7001
               protocol: TCP

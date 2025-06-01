@@ -35,6 +35,17 @@ spec:
                 port:
                   number: 7001
 
+    - host: devops-wizard.com
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: frontend-service
+                port:
+                  number: 80
+
     - host: bot.devops-wizard.com
       http:
         paths:
