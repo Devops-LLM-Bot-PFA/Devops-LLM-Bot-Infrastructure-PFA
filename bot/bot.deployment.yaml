@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bot-deployment
+  namespace: default
+  labels:
+    app.kubernetes.io/managed-by: admin
+    app: bot
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: bot-pod
+
+  template:
+    metadata:
+      name: bot-pod
+      labels:
+        app: bot-pod
+    spec:
+      containers:
+        - name: bot-container
+          image: aymenkoched02/devops-llm-bot:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: bot-config
+      restartPolicy: Always

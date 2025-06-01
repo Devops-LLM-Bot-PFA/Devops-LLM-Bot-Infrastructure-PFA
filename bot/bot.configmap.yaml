@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bot-config
+  namespace: default
+  labels:
+    app.kubernetes.io/managed-by: admin
+    app: bot
+
+data:
+  WEBHOOK_PROXY_URL:
+  APP_ID:
+  PRIVATE_KEY:
+  WEBHOOK_SECRET:
+  GITHUB_CLIENT_ID:
+  GITHUB_CLIENT_SECRET:
+  OPENAI_API_KEY:
+  OPENAI_BASE_PATH:
